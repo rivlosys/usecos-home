@@ -1,0 +1,316 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --card: #16161f;
+  --border: rgba(255,255,255,0.07);
+  --text: #f0f0f5;
+  --muted: #6b6b80;
+  --sub: #9494a8;
+
+  /* Tool accent colors */
+  --mortgage: #1b76df;
+  --mortgage-glow: rgba(27,118,223,0.15);
+  --vin: #e85d2f;
+  --vin-glow: rgba(232,93,47,0.15);
+  --pay: #22c98a;
+  --pay-glow: rgba(34,201,138,0.15);
+
+  /* Add new tool colors here */
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── Background grid ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Header ── */
+header {
+  padding: 48px 0 0;
+  text-align: center;
+}
+
+.wordmark {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(42px, 8vw, 72px);
+  letter-spacing: -2px;
+  color: var(--text);
+  line-height: 1;
+  animation: fadeDown 0.6s ease both;
+}
+
+.wordmark span {
+  background: linear-gradient(135deg, #1b76df, #22c98a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagline {
+  margin-top: 14px;
+  font-size: 16px;
+  color: var(--sub);
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  animation: fadeDown 0.6s 0.1s ease both;
+}
+
+.trust-pills {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  animation: fadeDown 0.6s 0.2s ease both;
+}
+
+.pill {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 4px 12px;
+  letter-spacing: 0.3px;
+}
+
+/* ── Section label ── */
+.section-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 56px 0 24px;
+  animation: fadeUp 0.5s 0.3s ease both;
+}
+
+/* ── Tool grid ── */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+/* ── Tool card ── */
+.tool-card {
+  display: block;
+  text-decoration: none;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeUp 0.5s ease both;
+}
+
+.tool-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Color theming per card */
+.tool-card[data-color="mortgage"] {
+  --accent: var(--mortgage);
+  --glow: var(--mortgage-glow);
+}
+.tool-card[data-color="vin"] {
+  --accent: var(--vin);
+  --glow: var(--vin-glow);
+}
+.tool-card[data-color="pay"] {
+  --accent: var(--pay);
+  --glow: var(--pay-glow);
+}
+/* Add new tool color data attributes here */
+
+.tool-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 32px var(--glow), 0 8px 24px rgba(0,0,0,0.3);
+}
+
+/* Glow top bar */
+.tool-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.tool-card:hover::before { opacity: 1; }
+
+.tool-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--glow);
+  border: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.tool-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.tool-desc {
+  font-size: 13px;
+  color: var(--sub);
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+.tool-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  color: var(--accent);
+  background: var(--glow);
+  border: 1px solid var(--accent);
+  border-radius: 100px;
+  padding: 2px 8px;
+  opacity: 0.85;
+}
+
+.tool-cta {
+  position: absolute;
+  bottom: 24px;
+  right: 22px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.tool-card:hover .tool-cta { opacity: 1; transform: translateX(0); }
+
+/* ── Coming soon card ── */
+.tool-card.coming-soon {
+  opacity: 0.45;
+  cursor: default;
+  pointer-events: none;
+}
+
+.coming-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 3px 8px;
+}
+
+/* ── Stagger delays ── */
+.tool-card:nth-child(1) { animation-delay: 0.35s; }
+.tool-card:nth-child(2) { animation-delay: 0.45s; }
+.tool-card:nth-child(3) { animation-delay: 0.55s; }
+.tool-card:nth-child(4) { animation-delay: 0.65s; }
+.tool-card:nth-child(5) { animation-delay: 0.75s; }
+
+/* ── Footer ── */
+footer {
+  margin-top: 72px;
+  padding-bottom: 48px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+  animation: fadeUp 0.5s 0.8s ease both;
+}
+
+.footer-brand {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-links a:hover { color: var(--sub); }
+
+.footer-note {
+  margin-top: 16px;
+  font-size: 11px;
+  color: #3a3a50;
+}
+
+/* ── Animations ── */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .tools-grid { grid-template-columns: 1fr; }
+  header { padding-top: 36px; }
+  .section-label { margin-top: 40px; }
+}

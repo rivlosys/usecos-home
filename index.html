@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usecos — Free Canadian Financial Tools</title>
+  <meta name="description" content="Free, private Canadian financial tools. Mortgage calculator, VIN decoder, payment calculator and more. No signup. No tracking. Built by Rivlosys.">
+  <link rel="canonical" href="https://usecos.app/" />
+
+  <meta property="og:title" content="Usecos — Free Canadian Financial Tools">
+  <meta property="og:description" content="Free, private tools for Canadian homebuyers, car shoppers, and more.">
+  <meta property="og:url" content="https://usecos.app">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Usecos",
+    "url": "https://usecos.app/",
+    "description": "Free private Canadian financial tools by Rivlosys",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Rivlosys"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="wordmark">use<span>cos</span></div>
+    <p class="tagline">Free private tools for Canadians — no signup, no tracking</p>
+    <div class="trust-pills">
+      <span class="pill">🇨🇦 Canada-focused</span>
+      <span class="pill">🔒 100% private</span>
+      <span class="pill">⚡ No account needed</span>
+      <span class="pill">by Rivlosys</span>
+    </div>
+  </header>
+
+  <p class="section-label">Tools</p>
+
+  <div class="tools-grid">
+
+    <!-- ── TOOL 1: Mortgage ── -->
+    <a class="tool-card" href="https://mortgage.usecos.app" data-color="mortgage">
+      <div class="tool-icon">🏠</div>
+      <div class="tool-name">Mortgage Calculator</div>
+      <div class="tool-desc">Payments, CMHC insurance, stress test, land transfer tax — all provinces.</div>
+      <div class="tool-tags">
+        <span class="tag">2026 Rules</span>
+        <span class="tag">CMHC</span>
+        <span class="tag">Stress Test</span>
+      </div>
+      <span class="tool-cta">Open →</span>
+    </a>
+
+    <!-- ── TOOL 2: VIN ── -->
+    <a class="tool-card" href="https://vin.usecos.app" data-color="vin">
+      <div class="tool-icon">🚗</div>
+      <div class="tool-name">VIN Decoder</div>
+      <div class="tool-desc">Decode any vehicle identification number instantly. History, specs, and more.</div>
+      <div class="tool-tags">
+        <span class="tag">Free</span>
+        <span class="tag">Instant</span>
+      </div>
+      <span class="tool-cta">Open →</span>
+    </a>
+
+    <!-- ── TOOL 3: Pay ── -->
+    <a class="tool-card" href="https://pay.usecos.app" data-color="pay">
+      <div class="tool-icon">💳</div>
+      <div class="tool-name">Payment Calculator</div>
+      <div class="tool-desc">Break down any loan or payment schedule. Fast, clear, no fluff.</div>
+      <div class="tool-tags">
+        <span class="tag">Loans</span>
+        <span class="tag">Schedules</span>
+      </div>
+      <span class="tool-cta">Open →</span>
+    </a>
+
+    <!--
+    ══════════════════════════════════════════
+    TO ADD A NEW TOOL — copy this block:
+
+    <a class="tool-card" href="https://YOURSUBDOMAIN.usecos.app" data-color="COLORNAME">
+      <div class="tool-icon">EMOJI</div>
+      <div class="tool-name">Tool Name</div>
+      <div class="tool-desc">Short description of what it does.</div>
+      <div class="tool-tags">
+        <span class="tag">Tag 1</span>
+        <span class="tag">Tag 2</span>
+      </div>
+      <span class="tool-cta">Open →</span>
+    </a>
+
+    Then add your color to :root at the top:
+      --COLORNAME: #hexcode;
+      --COLORNAME-glow: rgba(r,g,b,0.15);
+    And add the data-color rule:
+      .tool-card[data-color="COLORNAME"] {
+        --accent: var(--COLORNAME);
+        --glow: var(--COLORNAME-glow);
+      }
+    ══════════════════════════════════════════
+
+    EXAMPLE coming-soon card (greyed out, not clickable):
+
+    <div class="tool-card coming-soon" data-color="mortgage">
+      <span class="coming-badge">Coming Soon</span>
+      <div class="tool-icon">📊</div>
+      <div class="tool-name">Budget Tracker</div>
+      <div class="tool-desc">Monthly budget planner for Canadian households.</div>
+      <div class="tool-tags">
+        <span class="tag">Budgeting</span>
+      </div>
+    </div>
+    -->
+
+  </div>
+
+  <footer>
+    <div class="footer-brand">Rivlosys · usecos.app</div>
+    <div class="footer-links">
+      <a href="https://mortgage.usecos.app/about.html">About</a>
+      <a href="https://mortgage.usecos.app/privacy.html">Privacy</a>
+      <a href="https://mortgage.usecos.app/disclaimer.html">Disclaimer</a>
+      <a href="mailto:helpinbx@gmail.com">Contact</a>
+    </div>
+    <p class="footer-note">© Rivlosys. All calculations are estimates only and do not constitute financial advice.</p>
+  </footer>
+
+</div>
+</body>
+</html>
