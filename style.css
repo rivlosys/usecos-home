@@ -503,20 +503,22 @@ footer {
   color: var(--muted);
   margin-bottom: 16px;
 }
-.guides-links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.guides-group {
+  margin-bottom: 20px;
 }
-.guides-links a {
-  display: inline-block;
-  padding: 8px 12px;
-  border-radius: 8px;
-  text-decoration: none;
+.guides-group h3 {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.guides-group a {
+  display: block;
+  font-size: 14px;
   color: var(--sub);
-  transition: all 0.15s ease;
+  text-decoration: none;
+  margin-bottom: 6px;
 }
-.guides-links a:hover { background: var(--surface); color: var(--text); }
+.guides-group a:hover { color: var(--text); }
 
 /* ── Quick Start ── */
 .quick-start {
