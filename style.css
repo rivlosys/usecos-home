@@ -115,6 +115,50 @@ header {
   animation: fadeUp 0.5s 0.3s ease both;
 }
 
+/* ── Category Styles ── */
+.category-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 56px 0 24px;
+  animation: fadeUp 0.5s 0.3s ease both;
+}
+
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(20px, 4vw, 24px);
+  margin-top: 20px;
+  color: var(--text);
+  animation: fadeDown 0.6s 0.15s ease both;
+}
+
+/* ── Category Nav ── */
+.category-nav {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 32px 0;
+  animation: fadeUp 0.6s 0.3s ease both;
+  flex-wrap: wrap;
+}
+.category-nav a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+.category-nav a:hover {
+  color: var(--text);
+  border-color: var(--sub);
+  background: var(--surface);
+}
+
 /* ── Tool grid ── */
 .tools-grid {
   display: grid;
@@ -132,8 +176,14 @@ header {
   padding: 28px 24px;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   animation: fadeUp 0.5s ease both;
+}
+
+.tool-card.featured {
+  transform: scale(1.04);
+  border-color: var(--accent);
 }
 
 .tool-card:hover {
@@ -171,6 +221,14 @@ header {
   transition: opacity 0.2s ease;
 }
 .tool-card:hover::before { opacity: 1; }
+
+.tool-icon {
+  transition: transform 0.2s ease;
+}
+
+.tool-card:hover .tool-icon {
+  transform: scale(1.1);
+}
 
 .tool-icon {
   width: 44px;
@@ -225,9 +283,7 @@ header {
   font-size: 12px;
   font-weight: 500;
   color: var(--accent);
-  opacity: 0;
-  transform: translateX(-4px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 .tool-card:hover .tool-cta { opacity: 1; transform: translateX(0); }
 
@@ -268,6 +324,55 @@ footer {
   padding-top: 32px;
   animation: fadeUp 0.5s 0.8s ease both;
 }
+
+/* ── Hero CTA ── */
+.hero-cta {
+  margin-top: 32px;
+  text-align: center;
+  animation: fadeUp 0.6s 0.25s ease both;
+}
+
+.primary-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #1b76df, #22c98a);
+  color: white;
+  text-decoration: none;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 10px 20px -5px rgba(27, 118, 223, 0.3);
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 25px -5px rgba(27, 118, 223, 0.4);
+}
+
+/* ── SEO Content Section ── */
+.seo-content {
+  margin-top: 80px;
+  text-align: left;
+  padding: 40px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  animation: fadeUp 0.5s 0.9s ease both;
+}
+.seo-content h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+.seo-content p, .seo-content ul {
+  color: var(--sub);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.seo-content ul { padding-left: 20px; }
 
 .footer-brand {
   font-family: 'Syne', sans-serif;
