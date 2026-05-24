@@ -1,6 +1,27 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
+  --bg: #ffffff;
+  --surface: #f7f7f9;
+  --card: #ffffff;
+  --border: rgba(0,0,0,0.08);
+  --text: #111;
+  --muted: #666;
+  --sub: #444;
+  --grid-color: rgba(0,0,0,0.03);
+
+  /* Tool accent colors */
+  --mortgage: #1b76df;
+  --mortgage-glow: rgba(27,118,223,0.1);
+  --vin: #e85d2f;
+  --vin-glow: rgba(232,93,47,0.1);
+  --pay: #16a34a;
+  --pay-glow: rgba(22,163,74,0.1);
+
+  /* Add new tool colors here */
+}
+
+[data-theme="dark"] {
   --bg: #0a0a0f;
   --surface: #111118;
   --card: #16161f;
@@ -8,16 +29,11 @@
   --text: #f0f0f5;
   --muted: #6b6b80;
   --sub: #9494a8;
-
-  /* Tool accent colors */
-  --mortgage: #1b76df;
+  --grid-color: rgba(255,255,255,0.025);
   --mortgage-glow: rgba(27,118,223,0.15);
-  --vin: #e85d2f;
   --vin-glow: rgba(232,93,47,0.15);
   --pay: #22c98a;
   --pay-glow: rgba(34,201,138,0.15);
-
-  /* Add new tool colors here */
 }
 
 html { scroll-behavior: smooth; }
