@@ -489,21 +489,32 @@ footer {
 
 /* ── Guides Section ── */
 .guides {
-  margin-top: 48px;
-  border-top: 1px solid var(--border);
-  padding-top: 32px;
+  margin-top: 56px;
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  text-align: center;
 }
 .guides h2 { font-size: 22px; margin-bottom: 20px; color: var(--text); }
+.guides-sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
 .guides ul { list-style: none; padding: 0; }
-.guides li { margin-bottom: 12px; }
+.guides li { margin-bottom: 8px; }
 .guides li a {
   color: var(--mortgage);
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
-  transition: opacity 0.2s;
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: all 0.15s ease;
 }
-.guides li a:hover { text-decoration: underline; opacity: 0.8; }
+.guides li a:hover { background: var(--surface); color: var(--text); }
 
 /* ── Quick Start ── */
 .quick-start {
