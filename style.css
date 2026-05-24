@@ -43,6 +43,7 @@ body {
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
+  line-height: 1.5;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -153,6 +154,7 @@ h1 {
   font-size: clamp(26px, 4vw, 38px);
   margin-top: 20px;
   color: var(--text);
+  letter-spacing: -0.3px;
   line-height: 1.2;
   animation: fadeDown 0.6s 0.15s ease both;
   max-width: 700px;
@@ -169,7 +171,8 @@ h1 {
 
 /* ── Tool card ── */
 .tool-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   background: var(--card);
   border: 1px solid var(--border);
@@ -279,6 +282,7 @@ h1 {
 
 .tool-tags {
   display: flex;
+  margin-top: auto;
   gap: 6px;
   flex-wrap: wrap;
 }
@@ -361,7 +365,13 @@ footer {
   border-radius: 10px;
   font-weight: 600;
   font-size: 15px;
-  transition: opacity 0.2s;
+  transition: all 0.2s ease;
+}
+
+.primary-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(27,118,223,0.25);
 }
 
 .primary-btn:hover {
@@ -389,9 +399,9 @@ footer {
 .value-prop p {
   font-size: 19px;
   color: var(--text);
-  max-width: 650px;
+  max-width: 600px;
   margin: 0 auto;
-  line-height: 1.4;
+  line-height: 1.5;
   font-weight: 500;
 }
 
@@ -409,6 +419,13 @@ footer {
   margin-bottom: 32px;
 }
 
+.scroll-hint {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
 /* ── Category nav cleanup (removed from HTML) ── */
 .category-nav, .category-title { display: none; }
 
@@ -416,7 +433,7 @@ footer {
 .seo-content, .faq, .about-trust {
   margin-top: 80px;
   text-align: left;
-  padding: 40px;
+  padding: 32px;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 24px;
@@ -424,6 +441,7 @@ footer {
 }
 .seo-content h2, .faq h2 {
   font-weight: 700;
+  margin-top: 24px;
   font-size: 20px;
   margin-bottom: 16px;
   color: var(--text);
