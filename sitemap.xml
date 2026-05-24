@@ -17,7 +17,55 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://usecos.app/blog/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://usecos.app/blog/page-2.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://usecos.app/blog/page-3.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://usecos.app/blog/400k-mortgage-monthly-payment-canada.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://usecos.app/blog/500k-mortgage-monthly-canada.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://usecos.app/blog/600k-mortgage-monthly-canada.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://usecos.app/blog/affordability-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://usecos.app/blog/amortization-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://usecos.app/blog/cmhc-changes-2026.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://usecos.app/blog/how-much-house-can-i-afford-canada.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://usecos.app/blog/income-needed-for-700k-house.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://usecos.app/blog/mortgage-payment-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://usecos.app/blog/stress-test-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -25,11 +73,15 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://usecos.app/blog/toronto-mortgage-calculator.html</loc>
+    <loc>https://usecos.app/blog/vin-check-before-buying.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://usecos.app/blog/extra-payment-calculator.html</loc>
+    <loc>https://usecos.app/blog/how-to-do-a-vin-check.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://usecos.app/blog/paycheck-after-tax-canada.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
