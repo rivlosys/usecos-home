@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
   <meta name="google-site-verification" content="zyUtsY8FCC6ZT__42zRbLUeZsHwuc7UxLgiF5rNwD3w">
   <script>
     if (localStorage.getItem('theme') === 'dark') {
@@ -14,7 +15,7 @@
   <meta name="description" content="Free online tools for USA & Canada. Mortgage calculators, VIN decoders, paycheck estimators, generators, and more. No signup. Private. Fast.">
   <link rel="canonical" href="https://usecos.app/" />
 
-  <meta property="og:title" content="Usecos — Free USA & Canada Financial Tools">
+  <meta property="og:title" content="Usecos — Free Online Tools for USA & Canada">
   <meta property="og:description" content="Free, private tools for USA & Canada homebuyers, car shoppers, and more.">
   <meta property="og:url" content="https://usecos.app">
   <meta property="og:type" content="website">
@@ -62,6 +63,30 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+     {
+       "@type": "Question",
+       "name": "Are these tools free?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "Yes, all tools on Usecos are completely free and require no signup."
+       }
+     },
+     {
+       "@type": "Question",
+       "name": "Do you store my data?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "No, all calculations run in your browser locally and no data is stored on our servers."
+       }
+     }
+   ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -78,8 +103,8 @@
 
   <header>
     <div class="wordmark">use<span>cos</span></div>
-    <h1>Free Online Tools for USA & Canada</h1>
-    <p class="tagline">No signup, no tracking — 100% private</p>
+    <h1>Make better financial decisions — in seconds.</h1>
+    <p class="tagline">Simple tools to help you save money, avoid mistakes, and understand your numbers.</p>
     <div class="trust-pills">
       <span class="pill">🇺🇸🇨🇦 USA & Canada</span>
       <span class="pill">🔒 100% private</span>
@@ -92,11 +117,25 @@
     <a href="https://mortgage.usecos.app" class="primary-btn">Start Calculating →</a>
   </div>
 
-  <nav class="category-nav">
-    <a href="#financial">Financial</a>
-    <a href="#vehicle">Vehicle</a>
-    <a href="#utilities">Utilities</a>
-  </nav>
+  <section class="value-prop">
+    <p>
+      Most people make financial decisions without the right tools — and it costs them thousands.
+    </p>
+
+    <p>
+      Usecos helps you calculate, compare, and make better choices instantly — without tracking or signup.
+    </p>
+  </section>
+
+  <section class="quick-start">
+    <h2>Start here</h2>
+
+    <div class="quick-links">
+      <a href="https://mortgage.usecos.app/">🏠 Buying a home</a>
+      <a href="https://vin.usecos.app">🚗 Buying a car</a>
+      <a href="https://pay.usecos.app">💰 Estimating income</a>
+    </div>
+  </section>
 
   <section id="financial" class="tool-section">
     <h2 class="category-title">Financial Tools</h2>
@@ -110,7 +149,10 @@
           </svg>
         </div>
         <div class="tool-name">Mortgage Calculator</div>
-        <div class="tool-desc">Payments, CMHC insurance, stress test, land transfer tax — all provinces.</div>
+        <div class="tool-desc">
+          See your real monthly payments and how to save $10K–$100K in interest.
+          <span class="micro-tip">💡 Most buyers overpay by $20K+</span>
+        </div>
         <div class="tool-tags">
           <span class="tag">2026 Rules</span>
           <span class="tag">Mortgage USA Canada</span>
@@ -126,7 +168,10 @@
           </svg>
         </div>
         <div class="tool-name">Paycheck Calculator</div>
-        <div class="tool-desc">See your exact take-home pay after federal tax, CPP, EI, and Social Security.</div>
+        <div class="tool-desc">
+          Know exactly what you take home after taxes — no surprises.
+          <span class="micro-tip">💡 Most people overestimate by 10–20%</span>
+        </div>
         <div class="tool-tags">
           <span class="tag">Salary Tax Estimator</span>
         </div>
@@ -149,7 +194,10 @@
           </svg>
         </div>
         <div class="tool-name">VIN Decoder</div>
-        <div class="tool-desc">Decode any vehicle identification number instantly. History, specs, and more.</div>
+        <div class="tool-desc">
+          Avoid buying a bad car — check hidden problems before you pay.
+          <span class="micro-tip">💡 One check can save a $5,000 lemon</span>
+        </div>
         <div class="tool-tags">
           <span class="tag">VIN decoder USA</span>
           <span class="tag">Vehicle lookup Canada</span>
@@ -158,17 +206,37 @@
       </a>
     </div>
   </section>
+  <p class="coming-text">More tools are being added regularly.</p>
 
   <section class="seo-content">
-    <h2>Free Online Tools & Calculators</h2>
+    <h2>Free Online Tools for USA & Canada</h2>
     <p>Usecos provides a growing collection of free online tools for users in the United States and Canada. From financial calculators and vehicle tools to everyday utilities, everything is fast, private, and requires no signup.</p>
-    <h2>Tools You Can Use Instantly</h2>
+    <p>
+      Use our <a href="https://mortgage.usecos.app/">mortgage calculator</a> to estimate payments, 
+      our <a href="https://vin.usecos.app/">VIN decoder</a> to check vehicle history, 
+      and <a href="https://pay.usecos.app/">paycheck calculator</a> to see your take-home income.
+    </p>
+    <h2>Financial & Utility Calculators</h2>
     <ul>
       <li>Mortgage and loan calculators for US & Canada</li>
       <li>VIN decoding and vehicle lookup tools</li>
       <li>Paycheck and income tax estimators</li>
       <li>General-purpose calculators and generators</li>
     </ul>
+  </section>
+
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <h3>Are these tools free?</h3>
+    <p>Yes, all tools on Usecos are completely free with no signup required.</p>
+    <h3>Do you store my data?</h3>
+    <p>No. All calculations run in your browser and nothing is stored.</p>
+    <h3>Are these tools accurate?</h3>
+    <p>We use up-to-date formulas and assumptions, but results are estimates.</p>
+  </section>
+
+  <section class="about-trust">
+    <p>Usecos is built by independent developers focused on creating simple, private, and accurate tools for real-world decisions in the U.S. and Canada.</p>
   </section>
 
   <!--
@@ -221,9 +289,11 @@
       <a href="/about.html">About</a>
       <a href="/privacy.html">Privacy</a>
       <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/sitemap.xml">Sitemap</a>
       <a href="mailto:helpinbx@gmail.com">Contact</a>
     </div>
-    <p class="footer-note">© Rivlosys. All calculations are estimates only and do not constitute financial advice.</p>
+    <p class="footer-extra">No tracking. No data stored. No signup required.</p>
+    <p class="footer-note">Built by Rivlosys — independent software tools for real-world decisions.</p>
   </footer>
 
 </div>

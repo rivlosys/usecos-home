@@ -47,10 +47,8 @@ body {
   overflow-x: hidden;
 }
 
-a { transition: color 0.2s ease; }
-
 /* ── Background grid ── */
-/* body::before {
+body::before {
   content: '';
   position: fixed;
   inset: 0;
@@ -60,28 +58,25 @@ a { transition: color 0.2s ease; }
   background-size: 60px 60px;
   pointer-events: none;
   z-index: 0;
-} */
+}
 
 .wrap {
   position: relative;
   z-index: 1;
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
 /* ── Header ── */
 header {
-  padding: 56px 0 0;
+  padding: 48px 0 0;
   text-align: center;
 }
 
 .wordmark {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
   font-weight: 700;
   font-size: clamp(42px, 8vw, 72px);
-  letter-spacing: -2px;
   letter-spacing: -1px;
   color: var(--text);
   line-height: 1;
@@ -125,7 +120,6 @@ header {
 
 /* ── Section label ── */
 .section-label {
-  font-family: 'Syne', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -137,7 +131,6 @@ header {
 
 /* ── Category Styles ── */
 .category-title {
-  font-family: 'Syne', sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: var(--text);
@@ -145,16 +138,21 @@ header {
   animation: fadeUp 0.5s 0.3s ease both;
 }
 
+h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 48px;
+  margin-bottom: 24px;
+  color: var(--text);
+  text-align: center;
+}
+
 h1 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: clamp(24px, 5vw, 42px);
-  letter-spacing: -0.5px;
   font-weight: 700;
   font-size: clamp(26px, 4vw, 38px);
   margin-top: 20px;
   color: var(--text);
-  line-height: 1.1;
   line-height: 1.2;
   animation: fadeDown 0.6s 0.15s ease both;
   max-width: 700px;
@@ -167,13 +165,10 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 16px;
-  margin-top: 24px;
 }
 
 /* ── Tool card ── */
 .tool-card {
-  display: flex;
-  flex-direction: column;
   display: block;
   text-decoration: none;
   background: var(--card);
@@ -188,8 +183,6 @@ h1 {
 }
 
 .tool-card.featured {
-  transform: scale(1.05);
-  border-color: var(--accent);
   transform: none;
   border: 2px solid var(--accent);
   box-shadow: 0 16px 40px rgba(0,0,0,0.1);
@@ -259,8 +252,6 @@ h1 {
 }
 
 .tool-name {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
   font-weight: 600;
   font-size: 17px;
   color: var(--text);
@@ -272,20 +263,18 @@ h1 {
   color: var(--sub);
   line-height: 1.55;
   margin-bottom: 18px;
-  flex-grow: 1;
 }
 
 .micro-tip {
   display: block;
   margin-top: 10px;
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--accent);
   background: var(--glow);
   padding: 4px 10px;
   border-radius: 8px;
   width: fit-content;
-  opacity: 0.8;
 }
 
 .tool-tags {
@@ -366,14 +355,13 @@ footer {
 .primary-btn {
   display: inline-block;
   padding: 12px 20px;
-  background: linear-gradient(135deg, #1b76df, #22c98a);
+  background: #1b76df;
   color: white;
   text-decoration: none;
   border-radius: 10px;
   font-weight: 600;
   font-size: 15px;
   transition: opacity 0.2s;
-  box-shadow: 0 6px 18px rgba(27,118,223,0.25);
 }
 
 .primary-btn:hover {
@@ -390,7 +378,7 @@ footer {
 }
 
 .value-prop {
-  margin: 56px 0;
+  margin: 64px 0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -399,8 +387,8 @@ footer {
 }
 
 .value-prop p {
-  font-size: 17px;
-  color: var(--sub);
+  font-size: 19px;
+  color: var(--text);
   max-width: 650px;
   margin: 0 auto;
   line-height: 1.4;
@@ -425,8 +413,8 @@ footer {
 .category-nav, .category-title { display: none; }
 
 /* ── SEO Content Section ── */
-.seo-content {
-  margin-top: 64px;
+.seo-content, .faq, .about-trust {
+  margin-top: 80px;
   text-align: left;
   padding: 40px;
   background: var(--card);
@@ -434,23 +422,35 @@ footer {
   border-radius: 24px;
   animation: fadeUp 0.5s 0.9s ease both;
 }
-.seo-content h2 {
-  font-family: 'Syne', sans-serif;
+.seo-content h2, .faq h2 {
   font-weight: 700;
   font-size: 20px;
   margin-bottom: 16px;
   color: var(--text);
 }
-.seo-content p, .seo-content ul {
+.faq h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+  margin-top: 24px;
+}
+.faq h3:first-of-type { margin-top: 0; }
+.seo-content p, .seo-content ul, .faq p, .about-trust p {
   color: var(--sub);
   font-size: 15px;
   line-height: 1.6;
   margin-bottom: 24px;
 }
 .seo-content ul { padding-left: 20px; }
+.seo-content a {
+  color: var(--mortgage);
+  text-decoration: none;
+  font-weight: 500;
+}
+.seo-content a:hover { text-decoration: underline; }
 
 .footer-brand {
-  font-family: 'Syne', sans-serif;
   font-weight: 700;
   font-size: 13px;
   color: var(--muted);
@@ -498,7 +498,6 @@ footer {
   line-height: 1.7;
   animation: fadeUp 0.6s 0.2s ease both;
 }
-.content-area h1 { font-family: 'Syne', sans-serif; margin-bottom: 24px; }
 .content-area p { margin-bottom: 16px; color: var(--sub); }
 
 /* ── Mobile ── */
