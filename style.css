@@ -152,6 +152,13 @@ h1 {
   margin-right: auto;
 }
 
+section ul {
+  margin-bottom: 24px;
+}
+section li {
+  margin-bottom: 8px;
+}
+
 /* ── Tool grid ── */
 .tools-grid {
   display: grid;
@@ -424,6 +431,32 @@ footer {
   margin-bottom: 16px;
   color: var(--text);
 }
+
+.blog-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 16px 0 24px;
+  flex-wrap: wrap;
+}
+.blog-nav a {
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--muted);
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: all 0.15s ease;
+}
+.blog-nav a:hover {
+  color: var(--text);
+  border-color: var(--sub);
+}
+.blog-nav a.active {
+  background: var(--text);
+  color: var(--bg);
+}
 .seo-content p, .seo-content ul {
   color: var(--sub);
   font-size: 15px;
@@ -502,20 +535,19 @@ footer {
   font-size: 13px;
   color: var(--muted);
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 .guides-group {
   margin-bottom: 20px;
 }
 .guides-group h3 {
-  font-size: 14px;
-  color: var(--muted);
-  margin-bottom: 8px;
+  justify-content: flex-start;
+  text-align: left;
 }
 .guides-group a {
   display: block;
-  font-size: 14px;
-  color: var(--sub);
-  text-decoration: none;
   margin-bottom: 6px;
 }
 .guides-group a:hover { color: var(--text); }
