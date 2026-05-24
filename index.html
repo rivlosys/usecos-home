@@ -7,6 +7,7 @@
     }
   </script>
   <meta charset="UTF-8" />
+  <meta name="google-site-verification" content="zyUtsY8FCC6ZT__42zRbLUeZsHwuc7UxLgiF5rNwD3w" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" as="style">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -92,48 +93,69 @@
     <a href="https://mortgage.usecos.app" class="primary-btn">Start Calculating →</a>
   </div>
 
-  <p class="section-label">Tools</p>
+  <nav class="category-nav">
+    <a href="#financial">Financial</a>
+    <a href="#vehicle">Vehicle</a>
+    <a href="#utilities">Utilities</a>
+  </nav>
 
-  <div class="tools-grid">
+  <section id="financial" class="tool-section">
+    <h2 class="category-title">Financial Tools</h2>
+    <div class="tools-grid">
+      <!-- Mortgage -->
+      <a class="tool-card featured" href="https://mortgage.usecos.app" data-color="mortgage">
+        <div class="tool-icon">🏠</div>
+        <div class="tool-name">Mortgage Calculator</div>
+        <div class="tool-desc">Payments, CMHC insurance, stress test, land transfer tax — all provinces.</div>
+        <div class="tool-tags">
+          <span class="tag">2026 Rules</span>
+          <span class="tag">Mortgage USA Canada</span>
+        </div>
+        <span class="tool-cta">Open →</span>
+      </a>
+      <!-- Paycheck -->
+      <a class="tool-card" href="https://pay.usecos.app" data-color="pay">
+        <div class="tool-icon">💳</div>
+        <div class="tool-name">Paycheck Calculator</div>
+        <div class="tool-desc">See your exact take-home pay after federal tax, CPP, EI, and Social Security.</div>
+        <div class="tool-tags">
+          <span class="tag">Salary Tax Estimator</span>
+        </div>
+        <span class="tool-cta">Open →</span>
+      </a>
+    </div>
+  </section>
 
-    <!-- ── TOOL 1: Mortgage ── -->
-    <a class="tool-card featured" href="https://mortgage.usecos.app" data-color="mortgage">
-      <div class="tool-icon">🏠</div>
-      <div class="tool-name">Mortgage Calculator</div>
-      <div class="tool-desc">Payments, CMHC insurance, stress test, land transfer tax — all provinces.</div>
-      <div class="tool-tags">
-        <span class="tag">2026 Rules</span>
-        <span class="tag">CMHC</span>
-        <span class="tag">Stress Test</span>
-      </div>
-      <span class="tool-cta">Open →</span>
-    </a>
+  <section id="vehicle" class="tool-section">
+    <h2 class="category-title">Car & Vehicle Tools</h2>
+    <div class="tools-grid">
+      <!-- VIN -->
+      <a class="tool-card" href="https://vin.usecos.app" data-color="vin">
+        <div class="tool-icon">🚗</div>
+        <div class="tool-name">VIN Decoder</div>
+        <div class="tool-desc">Decode any vehicle identification number instantly. History, specs, and more.</div>
+        <div class="tool-tags">
+          <span class="tag">VIN decoder USA</span>
+          <span class="tag">Vehicle lookup Canada</span>
+        </div>
+        <span class="tool-cta">Open →</span>
+      </a>
+    </div>
+  </section>
 
-    <!-- ── TOOL 2: VIN ── -->
-    <a class="tool-card" href="https://vin.usecos.app" data-color="vin">
-      <div class="tool-icon">🚗</div>
-      <div class="tool-name">VIN Decoder</div>
-      <div class="tool-desc">Decode any vehicle identification number instantly. History, specs, and more.</div>
-      <div class="tool-tags">
-        <span class="tag">Free</span>
-        <span class="tag">Instant</span>
-      </div>
-      <span class="tool-cta">Open →</span>
-    </a>
+  <section class="seo-content">
+    <h2>Free Online Tools & Calculators</h2>
+    <p>Usecos provides a growing collection of free online tools for users in the United States and Canada. From financial calculators and vehicle tools to everyday utilities, everything is fast, private, and requires no signup.</p>
+    <h2>Tools You Can Use Instantly</h2>
+    <ul>
+      <li>Mortgage and loan calculators for US & Canada</li>
+      <li>VIN decoding and vehicle lookup tools</li>
+      <li>Paycheck and income tax estimators</li>
+      <li>General-purpose calculators and generators</li>
+    </ul>
+  </section>
 
-    <!-- ── TOOL 3: Pay ── -->
-    <a class="tool-card" href="https://pay.usecos.app" data-color="pay">
-      <div class="tool-icon">💳</div>
-      <div class="tool-name">Paycheck Calculator</div>
-      <div class="tool-desc">See your exact take-home pay after federal tax, CPP, EI, and Social Security. USA & Canada.</div>
-      <div class="tool-tags">
-        <span class="tag">Salary</span>
-        <span class="tag">Tax</span>
-      </div>
-      <span class="tool-cta">Open →</span>
-    </a>
-
-    <!--
+  <!--
     ══════════════════════════════════════════
     TO ADD A NEW TOOL — copy this block:
 
@@ -170,8 +192,6 @@
       </div>
     </div>
     -->
-
-  </div>
 
   <div class="seo-links">
     <a href="https://mortgage.usecos.app">Mortgage calculator Canada USA</a>
