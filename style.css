@@ -47,8 +47,10 @@ body {
   overflow-x: hidden;
 }
 
+a { transition: color 0.2s ease; }
+
 /* ── Background grid ── */
-body::before {
+/* body::before {
   content: '';
   position: fixed;
   inset: 0;
@@ -58,27 +60,29 @@ body::before {
   background-size: 60px 60px;
   pointer-events: none;
   z-index: 0;
-}
+} */
 
 .wrap {
   position: relative;
   z-index: 1;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
 /* ── Header ── */
 header {
-  padding: 48px 0 0;
+  padding: 56px 0 0;
   text-align: center;
 }
 
 .wordmark {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
+  font-weight: 700;
   font-size: clamp(42px, 8vw, 72px);
   letter-spacing: -2px;
+  letter-spacing: -1px;
   color: var(--text);
   line-height: 1;
   animation: fadeDown 0.6s ease both;
@@ -146,9 +150,12 @@ h1 {
   font-weight: 800;
   font-size: clamp(24px, 5vw, 42px);
   letter-spacing: -0.5px;
+  font-weight: 700;
+  font-size: clamp(26px, 4vw, 38px);
   margin-top: 20px;
   color: var(--text);
   line-height: 1.1;
+  line-height: 1.2;
   animation: fadeDown 0.6s 0.15s ease both;
   max-width: 700px;
   margin-left: auto;
@@ -160,10 +167,13 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 16px;
+  margin-top: 24px;
 }
 
 /* ── Tool card ── */
 .tool-card {
+  display: flex;
+  flex-direction: column;
   display: block;
   text-decoration: none;
   background: var(--card);
@@ -180,6 +190,8 @@ h1 {
 .tool-card.featured {
   transform: scale(1.05);
   border-color: var(--accent);
+  transform: none;
+  border: 2px solid var(--accent);
   box-shadow: 0 16px 40px rgba(0,0,0,0.1);
 }
 
@@ -249,6 +261,7 @@ h1 {
 .tool-name {
   font-family: 'Syne', sans-serif;
   font-weight: 700;
+  font-weight: 600;
   font-size: 17px;
   color: var(--text);
   margin-bottom: 6px;
@@ -259,18 +272,20 @@ h1 {
   color: var(--sub);
   line-height: 1.55;
   margin-bottom: 18px;
+  flex-grow: 1;
 }
 
 .micro-tip {
   display: block;
   margin-top: 10px;
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--accent);
   background: var(--glow);
   padding: 4px 10px;
   border-radius: 8px;
   width: fit-content;
+  opacity: 0.8;
 }
 
 .tool-tags {
@@ -351,13 +366,14 @@ footer {
 .primary-btn {
   display: inline-block;
   padding: 12px 20px;
-  background: #1b76df;
+  background: linear-gradient(135deg, #1b76df, #22c98a);
   color: white;
   text-decoration: none;
   border-radius: 10px;
   font-weight: 600;
   font-size: 15px;
   transition: opacity 0.2s;
+  box-shadow: 0 6px 18px rgba(27,118,223,0.25);
 }
 
 .primary-btn:hover {
@@ -374,7 +390,7 @@ footer {
 }
 
 .value-prop {
-  margin: 64px 0;
+  margin: 56px 0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -383,8 +399,8 @@ footer {
 }
 
 .value-prop p {
-  font-size: 19px;
-  color: var(--text);
+  font-size: 17px;
+  color: var(--sub);
   max-width: 650px;
   margin: 0 auto;
   line-height: 1.4;
@@ -410,7 +426,7 @@ footer {
 
 /* ── SEO Content Section ── */
 .seo-content {
-  margin-top: 80px;
+  margin-top: 64px;
   text-align: left;
   padding: 40px;
   background: var(--card);
@@ -420,6 +436,7 @@ footer {
 }
 .seo-content h2 {
   font-family: 'Syne', sans-serif;
+  font-weight: 700;
   font-size: 20px;
   margin-bottom: 16px;
   color: var(--text);
