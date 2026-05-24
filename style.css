@@ -5,18 +5,18 @@
   --surface: #f7f7f9;
   --card: #ffffff;
   --border: rgba(0,0,0,0.08);
-  --text: #111;
-  --muted: #666;
+  --text: #111111;
+  --muted: #6b7280;
   --sub: #444;
-  --grid-color: rgba(0,0,0,0.03);
+  --grid-color: rgba(0,0,0,0.04);
 
   /* Tool accent colors */
   --mortgage: #1b76df;
-  --mortgage-glow: rgba(27,118,223,0.1);
+  --mortgage-glow: rgba(27,118,223,0.12);
   --vin: #e85d2f;
-  --vin-glow: rgba(232,93,47,0.1);
+  --vin-glow: rgba(232,93,47,0.12);
   --pay: #16a34a;
-  --pay-glow: rgba(22,163,74,0.1);
+  --pay-glow: rgba(34,201,138,0.12);
 
   /* Add new tool colors here */
 }
@@ -42,7 +42,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -144,35 +144,15 @@ header {
 h1 {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
-  font-size: clamp(20px, 4vw, 24px);
+  font-size: clamp(24px, 5vw, 42px);
+  letter-spacing: -0.5px;
   margin-top: 20px;
   color: var(--text);
+  line-height: 1.1;
   animation: fadeDown 0.6s 0.15s ease both;
-}
-
-/* ── Category Nav ── */
-.category-nav {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin: 32px 0;
-  animation: fadeUp 0.6s 0.3s ease both;
-  flex-wrap: wrap;
-}
-.category-nav a {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--muted);
-  text-decoration: none;
-  padding: 8px 16px;
-  border: 1px solid var(--border);
-  border-radius: 100px;
-  transition: all 0.2s;
-}
-.category-nav a:hover {
-  color: var(--text);
-  border-color: var(--sub);
-  background: var(--surface);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ── Tool grid ── */
@@ -192,14 +172,15 @@ h1 {
   padding: 28px 24px;
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(10px);
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.2s ease;
   animation: fadeUp 0.5s ease both;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
 
 .tool-card.featured {
-  transform: scale(1.04);
+  transform: scale(1.05);
   border-color: var(--accent);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
 }
 
 .tool-card:hover {
@@ -223,7 +204,8 @@ h1 {
 
 .tool-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 0 32px var(--glow), 0 8px 24px rgba(0,0,0,0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
 }
 
 /* Glow top bar */
@@ -244,6 +226,11 @@ h1 {
 
 .tool-card:hover .tool-icon {
   transform: scale(1.1);
+}
+
+.tool-icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 .tool-icon {
@@ -272,6 +259,18 @@ h1 {
   color: var(--sub);
   line-height: 1.55;
   margin-bottom: 18px;
+}
+
+.micro-tip {
+  display: block;
+  margin-top: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--glow);
+  padding: 4px 10px;
+  border-radius: 8px;
+  width: fit-content;
 }
 
 .tool-tags {
@@ -351,21 +350,63 @@ footer {
 
 .primary-btn {
   display: inline-block;
-  padding: 14px 28px;
-  background: linear-gradient(135deg, #1b76df, #22c98a);
+  padding: 12px 20px;
+  background: #1b76df;
   color: white;
   text-decoration: none;
-  border-radius: 100px;
+  border-radius: 10px;
   font-weight: 600;
   font-size: 15px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 10px 20px -5px rgba(27, 118, 223, 0.3);
+  transition: opacity 0.2s;
 }
 
 .primary-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 25px -5px rgba(27, 118, 223, 0.4);
+  opacity: 0.9;
 }
+
+/* ── Trust & Value Prop ── */
+.trust-line {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #16a34a;
+  font-weight: 600;
+  animation: fadeDown 0.6s 0.25s ease both;
+}
+
+.value-prop {
+  margin: 64px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeUp 0.6s 0.3s ease both;
+}
+
+.value-prop p {
+  font-size: 19px;
+  color: var(--text);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.guide-text, .flow-text {
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 12px;
+  animation: fadeUp 0.6s 0.4s ease both;
+}
+
+.flow-text {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+/* ── Category nav cleanup (removed from HTML) ── */
+.category-nav, .category-title { display: none; }
 
 /* ── SEO Content Section ── */
 .seo-content {
