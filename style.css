@@ -342,7 +342,7 @@ footer {
 
 /* ── Hero CTA ── */
 .hero-cta {
-  margin-top: 28px;
+  margin-top: 20px;
   text-align: center;
   animation: fadeUp 0.6s 0.25s ease both;
 }
@@ -428,6 +428,7 @@ footer {
   color: var(--sub);
   font-size: 15px;
   line-height: 1.6;
+  max-width: 650px;
   margin-bottom: 24px;
 }
 .seo-content ul { padding-left: 20px; }
@@ -496,22 +497,26 @@ footer {
   border-radius: 16px;
   text-align: center;
 }
-.guides h2 {tom: 8px;
-}
+.guides h2 { margin-bottom: 8px; }
 .guides-sub {
   font-size: 13px;
   color: var(--muted);
-  margin-bottom: 16px
-.guides ul { list-style: none; padding: 0; }
-.guides li {
-  margin-bottom: 10px;);
+  margin-bottom: 16px;
+}
+.guides-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.guides-links a {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
   text-decoration: none;
+  color: var(--sub);
   transition: all 0.15s ease;
 }
-.guides a:hover {
-  background: var(--surface);
-  color: var(--text);
-}
+.guides-links a:hover { background: var(--surface); color: var(--text); }
 
 /* ── Quick Start ── */
 .quick-start {
@@ -544,7 +549,7 @@ footer {
 .trust-row {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
   font-size: 12px;
   color: var(--muted);
   margin-top: 12px;
