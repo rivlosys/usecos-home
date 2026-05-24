@@ -147,7 +147,7 @@ h1 {
   color: var(--text);
   line-height: 1.2;
   animation: fadeDown 0.6s 0.15s ease both;
-  max-width: 700px;
+  max-width: 640px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -291,9 +291,9 @@ h1 {
 }
 
 .tool-cta {
-  position: absolute;
-  bottom: 24px;
-  right: 22px;
+  position: static;
+  margin-top: 12px;
+  align-self: flex-end;
   font-size: 12px;
   font-weight: 500;
   color: var(--accent);
@@ -461,7 +461,7 @@ footer {
 .footer-note {
   margin-top: 16px;
   font-size: 11px;
-  color: #3a3a50;
+  color: var(--muted);
 }
 
 /* ── Animations ── */
@@ -496,7 +496,7 @@ footer {
 .quick-links {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
   margin-top: 16px;
   flex-wrap: wrap;
 }
