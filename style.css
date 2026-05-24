@@ -487,6 +487,24 @@ footer {
 .content-area h1 { font-weight: 700; margin-bottom: 24px; }
 .content-area p { margin-bottom: 16px; color: var(--sub); }
 
+/* ── Guides Section ── */
+.guides {
+  margin-top: 48px;
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+}
+.guides h2 { font-size: 22px; margin-bottom: 20px; color: var(--text); }
+.guides ul { list-style: none; padding: 0; }
+.guides li { margin-bottom: 12px; }
+.guides li a {
+  color: var(--mortgage);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: opacity 0.2s;
+}
+.guides li a:hover { text-decoration: underline; opacity: 0.8; }
+
 /* ── Quick Start ── */
 .quick-start {
   margin-top: 48px;
