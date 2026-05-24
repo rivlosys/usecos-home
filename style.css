@@ -77,11 +77,8 @@ header {
 }
 
 .wordmark {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
   font-weight: 700;
   font-size: clamp(42px, 8vw, 72px);
-  letter-spacing: -2px;
   letter-spacing: -1px;
   color: var(--text);
   line-height: 1;
@@ -125,7 +122,6 @@ header {
 
 /* ── Section label ── */
 .section-label {
-  font-family: 'Syne', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -137,7 +133,6 @@ header {
 
 /* ── Category Styles ── */
 .category-title {
-  font-family: 'Syne', sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: var(--text);
@@ -146,15 +141,10 @@ header {
 }
 
 h1 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: clamp(24px, 5vw, 42px);
-  letter-spacing: -0.5px;
   font-weight: 700;
   font-size: clamp(26px, 4vw, 38px);
   margin-top: 20px;
   color: var(--text);
-  line-height: 1.1;
   line-height: 1.2;
   animation: fadeDown 0.6s 0.15s ease both;
   max-width: 700px;
@@ -165,8 +155,8 @@ h1 {
 /* ── Tool grid ── */
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
   margin-top: 24px;
 }
 
@@ -174,7 +164,6 @@ h1 {
 .tool-card {
   display: flex;
   flex-direction: column;
-  display: block;
   text-decoration: none;
   background: var(--card);
   border: 1px solid var(--border);
@@ -188,9 +177,6 @@ h1 {
 }
 
 .tool-card.featured {
-  transform: scale(1.05);
-  border-color: var(--accent);
-  transform: none;
   border: 2px solid var(--accent);
   box-shadow: 0 16px 40px rgba(0,0,0,0.1);
 }
@@ -259,8 +245,6 @@ h1 {
 }
 
 .tool-name {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
   font-weight: 600;
   font-size: 17px;
   color: var(--text);
@@ -449,8 +433,11 @@ footer {
 }
 .seo-content ul { padding-left: 20px; }
 
+.faq-item {
+  margin-bottom: 16px;
+}
+
 .footer-brand {
-  font-family: 'Syne', sans-serif;
   font-weight: 700;
   font-size: 13px;
   color: var(--muted);
@@ -540,10 +527,33 @@ footer {
   flex-wrap: wrap;
 }
 
+.trust-row span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.trust-row svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
 /* ── SEO Links ── */
 .seo-links {
   display: none;
 }
+
+@media (min-width: 481px) {
+  .tool-card:last-child {
+    grid-column: span 2;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
 /* ── Mobile ── */
 @media (max-width: 480px) {
   .tools-grid { grid-template-columns: 1fr; }
