@@ -79,12 +79,24 @@ header {
   text-align: center;
 }
 
+.brand-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
 .wordmark {
   font-weight: 700;
-  font-size: clamp(42px, 8vw, 72px);
+  font-size: clamp(32px, 6vw, 48px);
   letter-spacing: -1px;
   color: var(--text);
   line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .wordmark span {
@@ -428,18 +440,15 @@ footer {
   flex-wrap: wrap;
 }
 .blog-nav a {
-  font-size: 13px;
-  padding: 6px 12px;
+  border: 1px solid #e0e0e0;
   border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 14px;
   text-decoration: none;
-  color: var(--muted);
-  background: var(--card);
-  border: 1px solid var(--border);
-  transition: all 0.15s ease;
+  color: inherit;
 }
 .blog-nav a:hover {
-  color: var(--text);
-  border-color: var(--sub);
+  background: #f5f5f5;
 }
 .blog-nav a.active {
   background: var(--text);
@@ -545,29 +554,34 @@ footer {
 .guides-heading {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 14px;
-  font-weight: 600;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 700;
   color: var(--text);
-  margin-bottom: 4px;
+  margin-bottom: 12px;
 }
 
 .guides-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   background: var(--surface);
   border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--muted);
 }
 
+.guides-icon[data-color="mortgage"] { background: var(--mortgage-glow); color: var(--mortgage); border-color: rgba(27,118,223,0.1); }
+.guides-icon[data-color="vin"] { background: var(--vin-glow); color: var(--vin); border-color: rgba(232,93,47,0.1); }
+.guides-icon[data-color="pay"] { background: var(--pay-glow); color: var(--pay); border-color: rgba(22,163,74,0.1); }
+.guides-icon[data-color="gst"] { background: var(--gst-glow); color: var(--gst); border-color: rgba(124,58,237,0.1); }
+
 .guides-icon svg {
-  width: 16px;
-  height: 16px;
+  width: 18px !important;
+  height: 18px !important;
+  stroke: currentColor;
 }
 
 .guides-group a {
@@ -707,3 +721,9 @@ footer {
 #theme-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 [data-theme="dark"] .sun { display: none; }
 :root:not([data-theme="dark"]) .moon { display: none; }
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
