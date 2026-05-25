@@ -17,6 +17,8 @@
   --vin-glow: rgba(232,93,47,0.12);
   --pay: #16a34a;
   --pay-glow: rgba(34,201,138,0.12);
+  --gst: #7c3aed;
+  --gst-glow: rgba(124,58,237,0.12);
 
   /* Add new tool colors here */
 }
@@ -34,6 +36,7 @@
   --vin-glow: rgba(232,93,47,0.15);
   --pay: #22c98a;
   --pay-glow: rgba(34,201,138,0.15);
+  --gst-glow: rgba(124,58,237,0.15);
 }
 
 html { scroll-behavior: smooth; }
@@ -82,14 +85,16 @@ header {
   letter-spacing: -1px;
   color: var(--text);
   line-height: 1;
-  animation: fadeDown 0.6s ease both;
 }
 
 .wordmark span {
-  background: linear-gradient(135deg, #1b76df, #22c98a);
+  display: inline-block;
+  background: linear-gradient(90deg, #1b76df 0%, #22c98a 50%, #1b76df 100%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: gradientShift 3s 0.3s ease-in-out 4 alternate;
 }
 
 .tagline {
@@ -120,25 +125,6 @@ header {
   letter-spacing: 0.3px;
 }
 
-/* ── Section label ── */
-.section-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 56px 0 24px;
-  animation: fadeUp 0.5s 0.3s ease both;
-}
-
-/* ── Category Styles ── */
-.category-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--text);
-  margin: 56px 0 24px;
-  animation: fadeUp 0.5s 0.3s ease both;
-}
 
 h1 {
   font-weight: 700;
@@ -204,6 +190,10 @@ section li {
 .tool-card[data-color="pay"] {
   --accent: var(--pay);
   --glow: var(--pay-glow);
+}
+.tool-card[data-color="gst"] {
+  --accent: var(--gst);
+  --glow: var(--gst-glow);
 }
 /* Add new tool color data attributes here */
 
@@ -363,39 +353,41 @@ footer {
   border-radius: 10px;
   font-weight: 600;
   font-size: 15px;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 6px 18px rgba(27,118,223,0.25);
 }
 
 .primary-btn:hover {
-  opacity: 0.9;
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(27,118,223,0.35);
 }
 
-/* ── Trust & Value Prop ── */
-.trust-line {
-  margin-top: 12px;
-  font-size: 13px;
-  color: #16a34a;
-  font-weight: 600;
-  animation: fadeDown 0.6s 0.25s ease both;
-}
-
-.value-prop {
-  margin: 56px 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  margin: 56px 0;
   animation: fadeUp 0.6s 0.3s ease both;
 }
 
-.value-prop p {
-  font-size: 17px;
-  color: var(--sub);
-  max-width: 650px;
-  margin: 0 auto;
-  line-height: 1.4;
-  font-weight: 500;
+.benefit-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+}
+
+.benefit-icon { font-size: 18px; }
+
+@media (max-width: 768px) {
+  .benefits-grid { grid-template-columns: 1fr; gap: 10px; margin: 40px 0; }
 }
 
 .guide-text, .flow-text {
@@ -412,18 +404,14 @@ footer {
   margin-bottom: 32px;
 }
 
-/* ── Category nav cleanup (removed from HTML) ── */
-.category-nav, .category-title { display: none; }
-
 /* ── SEO Content Section ── */
 .seo-content {
-  margin-top: 64px;
-  text-align: left;
-  padding: 40px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  animation: fadeUp 0.5s 0.9s ease both;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
 }
 .seo-content h2, .faq h2 {
   font-weight: 700;
@@ -536,12 +524,14 @@ footer {
   font-weight: 700;
   color: var(--text);
   margin-bottom: 4px;
+  text-align: left;
 }
 
 .guides-sub {
   font-size: 13px;
   color: var(--muted);
   margin-bottom: 24px;
+  text-align: left;
 }
 
 .guides-group {
@@ -676,7 +666,7 @@ footer {
 .trust-row svg {
   width: 14px;
   height: 14px;
-  stroke: currentColor;
+  stroke: #16a34a;
   fill: none;
   stroke-width: 2;
 }
@@ -684,14 +674,6 @@ footer {
 /* ── SEO Links ── */
 .seo-links {
   display: none;
-}
-
-@media (min-width: 481px) {
-  .tool-card:last-child {
-    grid-column: span 2;
-    max-width: 500px;
-    margin: 0 auto;
-  }
 }
 
 /* ── Mobile ── */

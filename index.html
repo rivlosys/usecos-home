@@ -122,7 +122,6 @@
       <span class="pill">🇺🇸🇨🇦 USA & Canada</span>
       <span class="pill">🔒 100% private</span>
       <span class="pill">⚡ No account needed</span>
-      <span class="pill">by Rivlosys</span>
     </div>
   </header>
 
@@ -130,21 +129,25 @@
     <a href="#tools" class="primary-btn">Start Calculating →</a>
   </div>
 
-  <section class="value-prop" id="financial">
-    <p>
-      Most people make important decisions without the right tools — and it costs them.
-    </p>
-
-    <p>
-      Usecos helps you calculate, compare, and make better choices instantly — without tracking or signup.
-    </p>
+  <section class="benefits-grid">
+    <div class="benefit-card">
+      <span class="benefit-icon">💰</span>
+      Save $20K+ in interest
+    </div>
+    <div class="benefit-card">
+      <span class="benefit-icon">💵</span>
+      Know your real take-home
+    </div>
+    <div class="benefit-card">
+      <span class="benefit-icon">🚗</span>
+      Avoid a $5K lemon
+    </div>
   </section>
 
   <section id="tools" class="tool-section">
-    <p class="tools-sub">Choose a tool to get started:</p>
     <div class="tools-grid">
       <!-- Mortgage -->
-      <a class="tool-card featured" href="https://mortgage.usecos.app" data-color="mortgage">
+      <a class="tool-card" href="https://mortgage.usecos.app" data-color="mortgage">
         <div class="tool-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path d="M3 12l9-9 9 9" stroke-width="2"/>
@@ -202,9 +205,29 @@
         </div>
         <span class="tool-cta">Open →</span>
       </a>
+
+      <!-- GST -->
+      <a class="tool-card" href="https://gst.usecos.app" data-color="gst">
+        <div class="tool-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 14l2 2 4-4"/>
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18"/>
+          </svg>
+        </div>
+        <div class="tool-name">GST/HST Calculator</div>
+        <div class="tool-desc">
+          Calculate Canadian sales tax instantly — GST, HST, and PST by province.
+          <span class="micro-tip">💡 Never overpay or undercharge tax again</span>
+        </div>
+        <div class="tool-tags">
+          <span class="tag">Canada Tax</span>
+          <span class="tag">GST HST PST</span>
+        </div>
+        <span class="tool-cta">Open →</span>
+      </a>
     </div>
   </section>
-  <p class="coming-text">More tools coming soon.</p>
 
   <section class="seo-content">
     <h2>Free Online Tools for USA & Canada</h2>
@@ -213,29 +236,11 @@
       <li>Mortgage calculators</li>
       <li>VIN lookup tools</li>
       <li>Paycheck estimators</li>
+      <li>GST/HST/PST tax calculators</li>
     </ul>
     <p>
-      Use tools like <a href="https://mortgage.usecos.app/">mortgage calculator</a>, <a href="https://vin.usecos.app/">VIN decoder</a>, and <a href="https://pay.usecos.app/">paycheck calculator</a> to make better decisions instantly.
+      Use tools like <a href="https://mortgage.usecos.app/">mortgage calculator</a>, <a href="https://vin.usecos.app/">VIN decoder</a>, <a href="https://pay.usecos.app/">paycheck calculator</a>, and <a href="https://gst.usecos.app/">GST HST calculator</a> to make better decisions instantly.
     </p>
-  </section>
-
-  <section class="faq seo-content">
-    <h2>Frequently Asked Questions</h2>
-
-    <div class="faq-item">
-      <h3>Are these tools free?</h3>
-      <p>Yes, all tools on Usecos are completely free with no signup required.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Do you store my data?</h3>
-      <p>No. All calculations run in your browser and nothing is stored.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Are these tools accurate?</h3>
-      <p>We use up-to-date formulas and assumptions, but results are estimates.</p>
-    </div>
   </section>
 
 <section class="guides">
@@ -285,43 +290,6 @@
   </div>
 </section>
 
-  <!--
-    ══════════════════════════════════════════
-    TO ADD A NEW TOOL — copy this block:
-
-    <a class="tool-card" href="https://YOURSUBDOMAIN.usecos.app" data-color="COLORNAME">
-      <div class="tool-icon">EMOJI</div>
-      <div class="tool-name">Tool Name</div>
-      <div class="tool-desc">Short description of what it does.</div>
-      <div class="tool-tags">
-        <span class="tag">Tag 1</span>
-        <span class="tag">Tag 2</span>
-      </div>
-      <span class="tool-cta">Open →</span>
-    </a>
-
-    Then add your color to :root at the top:
-      --COLORNAME: #hexcode;
-      --COLORNAME-glow: rgba(r,g,b,0.15);
-    And add the data-color rule:
-      .tool-card[data-color="COLORNAME"] {
-        --accent: var(--COLORNAME);
-        --glow: var(--COLORNAME-glow);
-      }
-    ══════════════════════════════════════════
-
-    EXAMPLE coming-soon card (greyed out, not clickable):
-
-    <div class="tool-card coming-soon" data-color="mortgage">
-      <span class="coming-badge">Coming Soon</span>
-      <div class="tool-icon">📊</div>
-      <div class="tool-name">Budget Tracker</div>
-      <div class="tool-desc">Monthly budget planner for Canadian households.</div>
-      <div class="tool-tags">
-        <span class="tag">Budgeting</span>
-      </div>
-    </div>
-    -->
 
   <div class="seo-links">
     <a href="https://mortgage.usecos.app">Mortgage calculator Canada USA</a>
@@ -335,7 +303,6 @@
       <a href="https://usecos.app/about.html">About</a>
       <a href="https://usecos.app/privacy.html">Privacy</a>
       <a href="https://usecos.app/disclaimer.html">Disclaimer</a>
-      <a href="https://usecos.app/sitemap.xml">Sitemap</a>
       <a href="mailto:helpinbx@gmail.com">Contact</a>
     </div>
     <div class="trust-row">
