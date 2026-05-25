@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
 Sitemap: https://usecos.app/sitemap.xml
+Sitemap: https://mortgage.usecos.app/sitemap.xml
+Sitemap: https://pay.usecos.app/sitemap.xml
+Sitemap: https://vin.usecos.app/sitemap.xml
+Sitemap: https://gst.usecos.app/sitemap.xml

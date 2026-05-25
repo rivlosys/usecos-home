@@ -422,12 +422,13 @@ footer {
 
 /* ── SEO Content Section ── */
 .seo-content {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  white-space: nowrap;
+  margin-top: 64px;
+  text-align: left;
+  padding: 40px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  animation: fadeUp 0.5s 0.9s ease both;
 }
 .seo-content h2, .faq h2 {
   font-weight: 700;
