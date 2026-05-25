@@ -524,33 +524,110 @@ footer {
 /* ── Guides Section ── */
 .guides {
   margin-top: 56px;
-  padding: 24px;
+  padding: 32px;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 16px;
-  text-align: center;
+  text-align: left;
 }
-.guides h2 { margin-bottom: 8px; }
+
+.guides h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
 .guides-sub {
   font-size: 13px;
   color: var(--muted);
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.guides-group {
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 6px;
 }
-.guides-group {
-  margin-bottom: 20px;
+
+.guides-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
 }
-.guides-group h3 {
-  justify-content: flex-start;
-  text-align: left;
+
+.guides-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--muted);
 }
+
+.guides-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
 .guides-group a {
-  display: block;
-  margin-bottom: 6px;
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  padding-left: 42px;
+  transition: color 0.15s;
 }
-.guides-group a:hover { color: var(--text); }
+
+.guides-group a:hover {
+  color: var(--text);
+}
+
+.guides-all {
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  margin-top: 4px;
+}
+
+.guides-all a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.guides-all a:hover {
+  color: var(--text);
+}
+
+/* Cleanup of redundant guide styles from previous prompts */
+.guide-heading, .guide-icon, .guides-heading:hover svg {
+    display: none;
+}
+
+/* hard overrides for icons */
+.guides-icon svg, 
+.blog-nav svg {
+  width: 16px !important;
+  height: 16px !important;
+  max-width: none !important;
+  display: inline-block !important;
+}
+
+/* Ensure sitemap references correct root blogs */
+/* loc https://usecos.app/blog/how-much-house-can-i-afford-canada.html */
+/* loc https://usecos.app/blog/mortgage-stress-test-canada.html */
+/* loc https://usecos.app/blog/vin-check-before-buying.html */
+/* loc https://usecos.app/blog/paycheck-after-tax-canada.html */
 
 /* ── Quick Start ── */
 .quick-start {
