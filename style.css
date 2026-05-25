@@ -6,7 +6,7 @@
   --card: #ffffff;
   --border: rgba(0,0,0,0.08);
   --text: #111111;
-  --muted: #525c68;
+  --muted: #6b7280;
   --sub: #444;
   --grid-color: rgba(0,0,0,0.04);
 
@@ -83,7 +83,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 8px; /* Adjusted gap for wordmark */
   margin-bottom: 8px;
   text-decoration: none;
 }
@@ -96,7 +96,11 @@ header {
   line-height: 1;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0;
+}
+
+.wordmark svg {
+  margin-right: 6px;
 }
 
 .wordmark span {
@@ -106,7 +110,7 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradientShift 3s 0.3s ease-in-out 4 alternate;
+  animation: gradientShift 3s 0.3s ease-in-out infinite alternate;
 }
 
 .tagline {
