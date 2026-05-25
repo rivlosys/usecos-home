@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   openGraph: { siteName: 'usecos', type: 'website' },
   twitter: { card: 'summary_large_image' },
   robots: 'index, follow',
+  themeColor: '#ffffff',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
